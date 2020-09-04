@@ -4,7 +4,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1, h2, h3, h4, p {
@@ -20,7 +21,8 @@ html, body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
@@ -31,8 +33,7 @@ body {
   height: 100vh;
   color: #fff;
   background: #F96661;
-  background: -moz-linear-gradient(45deg, #F96661 0%, #FF8552 100%);
-  background: -webkit-linear-gradient(45deg, #F96661 0%, #FF8552 100%);
+  background: -o-linear-gradient(45deg, #F96661 0%, #FF8552 100%);
   background: linear-gradient(45deg, #F96661 0%, #FF8552 100%);
   background-attachment: fixed;
 }
@@ -53,7 +54,9 @@ a {
   position: fixed;
   top: 50%;
   left: 40px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 #pp-nav li, .pp-slidesNav li {
@@ -65,6 +68,8 @@ a {
   height: 3px;
   border-radius: 0;
   background-color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -87,11 +92,16 @@ header {
   width: 100%;
   padding: 30px 40px 0;
   color: #fff;
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 1000;
 }
 
@@ -102,6 +112,8 @@ header {
   position: relative;
   text-transform: capitalize;
   z-index: 1000;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 
@@ -110,16 +122,22 @@ header {
 }
 
 header .wrap {
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .icons {
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-right: 62px;
 }
@@ -127,6 +145,8 @@ header .wrap {
 .icons a {
   font-size: 35px;
   margin: 0 12px;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 
@@ -176,11 +196,16 @@ header .menuIcon.js-menuOpen:after {
 nav {
   z-index: 999;
   position: fixed;
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: url('img/venezia_map.svg'),
     #131934;
   background-repeat: no-repeat;
@@ -210,6 +235,8 @@ li {
 nav ul li a {
   display: inline-block;
   color: #fff;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
   font-weight: 600;
   font-size: 116px;
@@ -227,7 +254,9 @@ nav ul li a:hover {
   bottom: 78px;
   left: -48px;
   text-transform: uppercase;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
   letter-spacing: 3px;
   font-size: 15px;
   font-weight: 200;
@@ -271,7 +300,6 @@ nav ul li a:hover {
   height: 30vh;
   background-image: url('img/onda-bassa-venezia.svg');
   background-repeat: repeat-x;
-  -webkit-background-size: contain;
   background-size: cover;
   position: absolute;
   left: -200px;
@@ -305,7 +333,6 @@ nav ul li a:hover {
   height: 600px;
   background-image: url('img/gondola-venezia.png');
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
   background-size: contain;
   position: absolute;
   right: -130px;
@@ -322,33 +349,52 @@ nav ul li a:hover {
   text-shadow: 1px 1px 11px rgba(0, 0, 0, 0.5);
   letter-spacing: 10px;
   top: 50vh !important;
-  left: 70vw !important;
+  right: 10px !important;
 }
 
 /* ! Schermata principale */
 main {
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
 .intro {
   position: relative;
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   z-index: 2;
   margin-left: 10%;
 }
@@ -382,7 +428,9 @@ main {
 
 .ve-margin {
   margin-top: 14px;
-  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 .intro h2 {
@@ -409,14 +457,18 @@ main {
 }
 
 .intro_dx a {
-  flex: 1;
-  box-shadow: 0 80px 140px 25px rgba(0, 0, 0, 0.8);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-shadow: 0 80px 140px 25px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 80px 140px 25px rgba(0, 0, 0, 0.8);
 }
 
 .intro_dx img {
   width: 50vw;
   height: 70vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .intro h3 {
@@ -427,7 +479,9 @@ main {
   letter-spacing: -1px;
   line-height: 0.9;
   z-index: 3;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-shadow: 1px 1px 14px rgba(0, 0, 0, 0.35);
 }
 
@@ -440,9 +494,15 @@ main {
 }
 
 .a_website {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 250px;
   height: 60px;
   font-size: 21px;
@@ -451,7 +511,10 @@ main {
   padding: 16px;
   text-align: center;
   margin-top: 50px;
-  box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 
@@ -459,20 +522,27 @@ main {
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
   background-color: #85FFC7;
-  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.3);
 }
 
 .intro_social {
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .intro_social a {
   margin: 16px;
   font-size: 40px;
   color: #fff;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 
@@ -484,6 +554,8 @@ main {
   font-size: 32px;
   font-weight: 100;
   color: #fff;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 
@@ -498,18 +570,25 @@ main {
 
 .progetto, .about {
   position: relative;
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   overflow: hidden;
 }
 
 .progetto main {
   background: url('img/presentantion_magnetic.png') repeat-x center;
-  -webkit-background-size: contain;
   background-size: contain;
 }
 
@@ -528,12 +607,15 @@ main {
 
 .z2 {
   z-index: 2;
+  padding-left: 16px;
 }
 
 .btn_indietro {
   position: relative;
   color: #000;
   opacity: 0.4;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -548,21 +630,36 @@ main {
 
 .progetto .details {
   margin: 24px auto 24px auto;
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .details div {
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .details h4 {
@@ -594,6 +691,8 @@ main {
   height: 3.5px;
   width: 0;
   background-color: #85FFC7;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
 
@@ -610,24 +709,40 @@ main {
 
 .text {
   position: relative;
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 0 100px;
   width: 100vw;
 }
 
 .heading {
   position: relative;
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 50px 0 50px;
 }
 
@@ -666,12 +781,20 @@ main {
 }
 
 .text_wrap {
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   max-width: 1200px;
   width: 100%;
 }
@@ -683,42 +806,65 @@ main {
 }
 
 .main_logo {
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #E5EBF0;
 }
 
 .main_logo img {
   width: 33.33%;
   min-width: 300px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .main_color {
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
   height: 40vh;
   background: #F96661;
 }
 
 .color {
-  flex: 1;
-  flex-basis: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
   height: 100px;
   margin: 0 16px;
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 1.2px;
@@ -772,9 +918,9 @@ main {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  box-shadow: inset 0px 3px 17px -4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 3px 17px -4px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 3px 17px -4px rgba(0, 0, 0, 0.5);
   background: url('img/concept_magnetic.png') no-repeat center;
-  -webkit-background-size: cover;
   background-size: cover;
 }
 
@@ -803,21 +949,43 @@ Su Di Me
 .flexbox_passione {
   margin-top: 50px;
   max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .item_passione {
-  flex: 1;
-  align-self: stretch;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   margin: 0 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .item_passione h4 {
@@ -873,7 +1041,10 @@ Su Di Me
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: center;
@@ -885,7 +1056,8 @@ Su Di Me
 .skill-set__icon {
   width: 10.6382%;
   -ms-flex-item-align: center;
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .skill-set__detail {
@@ -982,12 +1154,20 @@ Su Di Me
 footer {
   height: 40vh;
   width: 100%;
-  display: -webkit-flex;
   display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #F96661;
   overflow-x: hidden;
 }
@@ -996,6 +1176,8 @@ footer a {
   font-size: 40px;
   font-weight: 400;
   letter-spacing: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
@@ -1012,7 +1194,9 @@ Versione Desktop Medio
     top: unset;
     bottom: -86px;
     left: 50%;
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
   }
 
   .intro {
@@ -1037,7 +1221,9 @@ Versione Desktop Medio
 
   /* ! Template lavoro */
   .progetto .details {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .details div {
@@ -1071,6 +1257,14 @@ Versione Desktop Piccolo
 }
 
 @media screen and (min-width: 800px) and (max-width: 951px) {
+  .intro h1 {
+    font-size: 100px;
+  }
+
+  .testo-port-venezia {
+    font-size: 48px;
+  }
+
   .intro_dx span {
     right: 18px;
   }
@@ -1114,7 +1308,7 @@ Versione Desktop Piccolo
   .testo-port-venezia {
     font-size: 34px;
     top: 59vh !important;
-    left: 27vw !important;
+    right: 15px !important;
   }
 
   .gondola {
@@ -1138,7 +1332,8 @@ Versione Desktop Piccolo
   .intro_dx img {
     height: 71vh;
     width: 50vw;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .intro_dx span {
@@ -1156,7 +1351,6 @@ Versione Desktop Piccolo
   }
 
   .progetto main {
-    -webkit-background-size: cover;
     background-size: cover;
     background-repeat: repeat;
     background-position: -45%;
@@ -1171,7 +1365,9 @@ Versione Desktop Piccolo
   }
 
   .details div {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     margin: 8px 0 8px 8px;
   }
 
@@ -1205,7 +1401,8 @@ Versione Desktop Piccolo
 
   .main_color {
     height: 34vh;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .color:last-child {
@@ -1218,7 +1415,6 @@ Versione Desktop Piccolo
   }
 
   #concept_img_sapori {
-    -webkit-background-size: cover;
     background-size: cover;
     background-position: 28% center;
   }
@@ -1256,13 +1452,3 @@ Versione Desktop Piccolo
     font-size: 24px;
   }
 }
-
-/*
-Fasce media query
-Desktop Medio - 1650px
-Desktop Piccolo - 1200px
-Tablet Grande - 800px
-Tablet Piccolo - 400px
-Smartphone - 200px
-
-*/
