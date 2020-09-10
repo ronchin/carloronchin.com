@@ -1299,6 +1299,14 @@ Versione Desktop Piccolo
     margin-top: -55vw;
   }
 
+  .testo-venezia {
+    width: 80vw;
+    font-size: 70px;
+    top: 70px;
+    right: 20px;
+    text-align: right;
+  }
+
   .onda-bassa-venezia,
   .onda-media-venezia,
   .onda-alta-venezia {
