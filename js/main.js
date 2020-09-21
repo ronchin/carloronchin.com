@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('#pagepiling').pagepiling({
     scrollingSpeed: 1200,
-    anchors: ['sezioneUno', 'sezioneDue', 'sezioneTre', 'sezioneQuattro', 'sezioneCinque'],
+    anchors: ['sezioneUno', 'sezioneDue', 'sezioneTre', 'sezioneAbout', 'sezioneContatti'],
     navigation: {
             'bulletsColor': '#fff',
             'position': 'left',
@@ -25,7 +25,11 @@ $(document).ready(function() {
       }
 
       if (index == 5) {
-        tls5.play();
+        tlsAbout.play();
+      }
+
+      if (index == 6) {
+        tlsContact.play();
       }
 
     },
@@ -53,12 +57,14 @@ $(document).ready(function() {
       if (index == 4 && direction == 'down') {
         tls4.reverse();
       } else if (index == 5 && direction == 'up') {
-        tls5.reverse();
+        tlsAbout.reverse();
       }
 
-
-
-
+      if (index == 5 && direction == 'down') {
+        tlsAbout.reverse();
+      } else if (index == 6 && direction == 'up') {
+        tlsContact.reverse();
+      }
 
     }
 
@@ -188,7 +194,7 @@ $(document).ready(function() {
       }, '-=1.2')
 
       /*	-----------------------------------------------------------------------------------------------
-        Timeline Sezione #3
+      	Timeline Sezione #4
       --------------------------------------------------------------------------------------------------- */
       var tls4 = gsap.timeline({
         paused: true
@@ -223,37 +229,61 @@ $(document).ready(function() {
           ease: 'Power3.easeInOut'
         }, '-=1.2')
 
+      /*	-----------------------------------------------------------------------------------------------
+        Timeline Sezione #3
+      --------------------------------------------------------------------------------------------------- */
+      var tlsAbout = gsap.timeline({
+        paused: true
+      });
+
+      tlsAbout.from('#sezioneAbout .intro h3, #sezioneAbout .intro p, #sezioneAbout .intro_dx a', {
+          opacity: 0,
+          duration: 0.9,
+          ease: 'Power3.easeInOut'
+        })
+        .from('#sezioneAbout .intro_dx', {
+            x: 150,
+            scale: 0.9,
+            duration: 1,
+            ease: 'Power3.easeInOut'
+          }, '-=0.5')
+        .from('#sezioneAbout .a_website', {
+              opacity: 0,
+              scale: 0.8,
+              duration: 0.5,
+              ease: 'Power4.easeInOut'
+          }, '-=0.8')
+        .from('#sezioneAbout .ve-letter span', {
+          width: 0,
+          duration: 0.9,
+          ease: 'Power3.easeInOut'
+        }, '-=1.2')
+
         /*	-----------------------------------------------------------------------------------------------
           Timeline Sezione #5
         --------------------------------------------------------------------------------------------------- */
-        var tls5 = gsap.timeline({
+        var tlsContact = gsap.timeline({
           paused: true
         });
 
-        tls5.from('#sezioneCinque .intro h3, #sezioneCinque .intro p, #sezioneCinque .intro_dx a', {
+        tlsContact.from('#sezioneContatti .intro h3, #sezioneContatti .intro p, #sezioneContatti .intro_dx a', {
             opacity: 0,
             duration: 0.9,
             ease: 'Power3.easeInOut'
           })
-          .from('#sezioneCinque .intro_dx', {
+          .from('#sezioneContatti .intro_dx', {
               x: 150,
               scale: 0.9,
               duration: 1,
               ease: 'Power3.easeInOut'
             }, '-=0.5')
-          .from('#sezioneCinque .intro_social, #sezioneCinque .intro_mail', {
+          .from('#sezioneContatti .intro_social, #sezioneContatti .intro_mail', {
                 opacity: 0,
                 x: 50,
                 duration: 0.4,
                 ease: 'Power3.easeInOut'
             }, '-=0.6')
-          .from('#sezioneCinque .intro_dx span', {
-              opacity: 0,
-              x: -50,
-              duration: 1,
-              ease: 'Power3.easeInOut'
-            }, '-=0.9')
-          .from('#sezioneCinque .ve-letter span', {
+          .from('#sezioneContatti .ve-letter span', {
             width: 0,
             duration: 0.9,
             ease: 'Power3.easeInOut'

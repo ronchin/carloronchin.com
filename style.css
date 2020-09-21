@@ -73,6 +73,10 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
+#pp-nav span:nth-child(2), .pp-slidesNav span:nth-child(2) {
+  background-color: #000;
+}
+
 #pp-nav li .active span, .pp-slidesNav .active span {
   width: 40px;
   background-color: #fff;
@@ -597,6 +601,11 @@ main {
   background-size: cover;
 }
 
+#presentantion_fruitloop {
+  background: url('img/presentantion_fruitloop.png') no-repeat right center;
+  background-size: contain;
+}
+
 .bg_main_progetto {
   position: absolute;
   height: 100vh;
@@ -914,6 +923,26 @@ main {
   color: #fff;
 }
 
+.color_fruit_1 {
+  background-color: #1B134D;
+  color: #fff;
+}
+
+.color_fruit_2 {
+  background-color: #CF48AF;
+  color: #FFF;
+}
+
+.color_fruit_3 {
+  background-color: #FFF;
+  color: #000;
+}
+
+.color_fruit_4 {
+  background-color: #9FADB8;
+  color: #000;
+}
+
 .concept_img {
   width: 100vw;
   height: 100vh;
@@ -926,6 +955,10 @@ main {
 
 #concept_img_sapori {
   background: url('img/concept_sapori.png') no-repeat center;
+}
+
+#concept_img_fruitloop {
+  background: url('img/concept_fruitloop.png') no-repeat center;
 }
 
 /* ! --------------------------------------------------------------------------
