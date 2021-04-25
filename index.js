@@ -1,24 +1,3 @@
-/*------------------------------
-Init Locomotive Scroll
-----------------------------*/
-
- const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true,
-    multiplier: 0.9,
-    lerp: 0.1,
-    getDirection: true
-});
-
-
-/*------------------------------
-Mostra/Nascondi menu allo scroll
-----------------------------*/
-
-scroll.on('scroll', (instance) => {
-    document.documentElement.setAttribute('data-direction', instance.direction)
-});
-
 /*--------------------------
  	Init Parallax.js
 -----------------------------*/
@@ -26,7 +5,6 @@ var scene = document.getElementById('scene');
 var parallaxInstance = new Parallax(scene, {
     hoverOnly: true
 });
-
 
 /*--------------------------
 Init Swiper.js

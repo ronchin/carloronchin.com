@@ -1,5 +1,11 @@
 @font-face {
   font-family: "Aventa";
+  src: url("../assets/font/Aventa-Thin.woff2") format("woff2");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Aventa";
   src: url("../assets/font/Aventa-Light.woff2") format("woff2");
   font-weight: 300;
 }
@@ -167,8 +173,7 @@ html[data-direction="down"] #menu {
   transform: rotate(90deg);
   letter-spacing: 3px;
   font-size: 15px;
-  font-weight: 500;
-  color: #fff;
+  font-weight: 400;
   cursor: default;
   z-index: 998;
   -webkit-transition: all 0.2s ease-in-out;
@@ -375,12 +380,12 @@ h3 {
 
 #sezioneDue,
 #sezioneTre {
-  margin-top: 280px;
+  margin-top: 150px;
 }
 
 #sezioneDue .custom-p,
 #sezioneTre .custom-p {
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
@@ -393,7 +398,7 @@ h3 {
 #sezioneDue p,
 #sezioneTre p {
   color: #000;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.5rem;
 }
 
